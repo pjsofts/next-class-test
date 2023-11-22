@@ -10,9 +10,12 @@ body {
   position: relative;
 }
 
+
+
 .parent:hover .child{
   transform: scale(1);
 }
+
 .child {
   justify-content: center;
   width: 100%;
@@ -27,9 +30,24 @@ body {
   font-size: 40px;
   transform: scale(0);
   transition: all linear 0.2s;
+  
 }
 
+.parent:hover .child2{
+  animation: move 0.3s linear forwards;
+}
 .child2 {
   color: black;
   background-color: white;
+  
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }  
+
+  100% {
+    transform: translateY(40px);
+  }  
 }
